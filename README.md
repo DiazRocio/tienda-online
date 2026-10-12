@@ -21,8 +21,8 @@ Tener instalado [Node.js](https://nodejs.org/) en tu computadora. Luego, ejecuta
 
 1. Clonar este repositorio.
 2. Instalar las dependencias del proyecto:
-   npm install bootstrap react-bootstrap
-   npm install react-router-dom
+* npm install bootstrap react-bootstrap
+* npm install react-router-dom
 3. Correr el proyecto:
    npm run dev
 
