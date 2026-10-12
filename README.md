@@ -1,16 +1,31 @@
-# React + Vite
+# TechStore 🚀 - Tienda Online en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada en React que simula un e-commerce completo de tecnología. Permite a los usuarios explorar un catálogo avanzado con filtrado por categorías, buscador en tiempo real, vistas de detalle dinámicas con gestión de variantes (color y almacenamiento) y stock en tiempo real, un carrito de compras interactivo y un flujo completo de simulación de compra con formulario validado.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologías Utilizadas
+* **React** (Componentes funcionales y Hooks de estado y ciclo de vida: `useState`, `useEffect`)
+* **React Router DOM** (Gestión de rutas y navegación Single Page Application)
+* **Bootstrap 5** (Framework CSS para diseño responsivo, grillas y componentes visuales modernos)
+* **Vite** (Entorno de desarrollo y empaquetado rápido)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Funcionalidades Principales
+1. **Página de Inicio (Home)**: Banner destacado, presentación visual de la marca y accesos directos al catálogo.
+2. **Catálogo y Búsqueda**: Visualización de 12 productos tecnológicos de alta gama, con opción de filtrado por categoría y barra de búsqueda en tiempo real.
+3. **Detalle de Producto (`/producto/:id`)**: Vistas dinámicas e individuales para cada artículo, selección interactiva de versiones y colores con actualización de imágenes en tiempo real, y control estricto del stock disponible frente a las unidades ya añadidas al carrito.
+4. **Carrito de Compras**: Gestión dinámica de cantidades por ítem, cálculo automático de subtotales y total general, eliminación de productos y vaciado de stock.
+5. **Formulario de Compra / Checkout**: Formulario controlado con validaciones estrictas (campos obligatorios, formato de correo electrónico y validación numérica estricta para teléfonos) y pantalla de confirmación de éxito con generación de número de orden.
+6. **Formulario de Contacto (`/contacto`)**: Sección dedicada para que los usuarios puedan enviar consultas, sugerencias o reportar dudas, con validaciones de campos y retroalimentación visual al enviar el mensaje.
 
-## React Compiler
+## 📦 Instrucciones para Instalar y Correr el Proyecto Localmente
+Tener instalado [Node.js](https://nodejs.org/) en tu computadora. Luego, ejecutar los siguientes comandos en tu terminal:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clonar este repositorio.
+2. Instalar las dependencias del proyecto:
+   npm install bootstrap react-bootstrap
+   npm install react-router-dom
+3. Correr el proyecto:
+   npm run dev
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👥 Integrantes del grupo
+* Díaz Rocío Belén
+* Castex Juan Manuel

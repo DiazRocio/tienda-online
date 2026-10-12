@@ -1,202 +1,202 @@
 export const productos = [
   {
     id: "cel-01",
-    nombre: "Smartphone Samsung Galaxy S23",
+    nombre: "Smartphone Samsung Galaxy S26",
     categoria: "Celulares",
     marca: "Samsung",
-    imagen: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Pantalla Dynamic AMOLED 2X, potente procesador y gran rendimiento fotográfico.",
+    imagen: "/img/samsung-s26-negro.jpg",
+    descripcion: "Pantalla Dynamic AMOLED 2X de alta tasa de refresco, funciones de IA avanzada y gran rendimiento fotográfico.",
     especificaciones: {
-      pantalla: "6.1 pulgadas",
-      camaraPrincipal: "50 MP",
+      pantalla: "6.2 pulgadas",
+      camaraPrincipal: "200 MP",
       sistemaOperativo: "Android"
     },
     variantes: [
-      { id: "cel-01-negro-128", color: "Negro", almacenamiento: "128GB", precio: 750000, stock: 5 },
-      { id: "cel-01-blanco-256", color: "Blanco", almacenamiento: "256GB", precio: 820000, stock: 3 },
-      { id: "cel-01-verde-256", color: "Verde", almacenamiento: "256GB", precio: 820000, stock: 0 }
+      { id: "cel-01-negro-256", color: "Negro Ónix", almacenamiento: "256GB", precio: 1250000, stock: 5, imagen: "/img/samsung-s26-negro.jpg" },
+      { id: "cel-01-violeta-512", color: "Violeta Cobalto", almacenamiento: "512GB", precio: 1450000, stock: 3, imagen: "/img/samsung-s26-violeta.png" },
+      { id: "cel-01-blanco-512", color: "Blanco", almacenamiento: "512GB", precio: 1450000, stock: 0, imagen: "/img/samsung-s26-blanco.jpg" }
     ]
   },
   {
     id: "cel-02",
-    nombre: "iPhone 14 Apple",
+    nombre: "iPhone 17 Pro Max Apple",
     categoria: "Celulares",
     marca: "Apple",
-    imagen: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Sistema de cámara avanzado para mejores fotos con poca luz y modo Cine.",
+    imagen: "/img/iphone-17-naranja.jpg",
+    descripcion: "Chip de última generación, isla dinámica optimizada y un sistema fotográfico profesional.",
     especificaciones: {
       pantalla: "6.1 pulgadas",
-      camaraPrincipal: "12 MP",
+      camaraPrincipal: "48 MP",
       sistemaOperativo: "iOS"
     },
     variantes: [
-      { id: "cel-02-azul-128", color: "Azul", almacenamiento: "128GB", precio: 1100000, stock: 4 },
-      { id: "cel-02-rojo-256", color: "Rojo", almacenamiento: "256GB", precio: 1250000, stock: 2 }
+      { id: "cel-02-naranja-256", color: "Cosmic Orange", almacenamiento: "256GB", precio: 1750000, stock: 4, imagen: "/img/iphone-17-naranja.jpg" },
+      { id: "cel-02-azul-512", color: "Deep Blue", almacenamiento: "512GB", precio: 1980000, stock: 2, imagen: "/img/iphone-17-azul.jpg" }
     ]
   },
   {
     id: "pc-01",
-    nombre: "Notebook Lenovo IdeaPad 3",
+    nombre: "Notebook Lenovo IdeaPad Pro 5",
     categoria: "Computación",
     marca: "Lenovo",
-    imagen: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Ideal para productividad diaria, estudio y multitarea fluida.",
+    imagen: "/img/lenovo-ideapad.jpg",
+    descripcion: "Rendimiento superior con chasis metálico ultradelgado para creadores de contenido y productividad.",
     especificaciones: {
-      procesador: "AMD Ryzen 5",
-      memoriaRam: "8GB",
-      almacenamiento: "256GB SSD"
+      procesador: "AMD Ryzen 7",
+      memoriaRam: "16GB",
+      almacenamiento: "512GB SSD NVMe"
     },
     variantes: [
-      { id: "pc-01-gris-8gb", color: "Gris", almacenamiento: "256GB SSD", precio: 680000, stock: 6 }
+      { id: "pc-01-gris-16gb", color: "Gris Tormenta", almacenamiento: "512GB SSD", precio: 1150000, stock: 6, imagen: "/img/lenovo-ideapad.jpg" }
     ]
   },
   {
     id: "pc-02",
-    nombre: "Notebook HP Pavilion x360",
+    nombre: "Notebook HP Envy x360",
     categoria: "Computación",
     marca: "HP",
-    imagen: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Diseño convertible 2 en 1 con pantalla táctil para mayor versatilidad.",
+    imagen: "/img/hp-envy-360.jpg",
+    descripcion: "Diseño convertible 2 en 1 con pantalla táctil OLED y lápiz inteligente incluido.",
     especificaciones: {
-      procesador: "Intel Core i5",
+      procesador: "Intel Core Ultra 7",
       memoriaRam: "16GB",
-      almacenamiento: "512GB SSD"
+      almacenamiento: "1TB SSD"
     },
     variantes: [
-      { id: "pc-02-plata-16gb", color: "Plata", almacenamiento: "512GB SSD", precio: 990000, stock: 3 }
+      { id: "pc-02-plata-1tb", color: "Plata Natural", almacenamiento: "1TB SSD", precio: 1550000, stock: 3, imagen: "/img/hp-envy-360.jpg" }
     ]
   },
   {
     id: "aud-01",
-    nombre: "Auriculares Inalámbricos Sony WH-1000XM4",
+    nombre: "Auriculares Inalámbricos Sony WH-1000XM5",
     categoria: "Audio",
     marca: "Sony",
-    imagen: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Cancelación de ruido líder en la industria y sonido de alta fidelidad.",
+    imagen: "/img/auriculares-sony-rosa.jpg",
+    descripcion: "Cancelación de ruido líder en la industria con múltiples micrófonos y audio espacial.",
     especificaciones: {
-      conectividad: "Bluetooth / Inalámbrico",
-      cancelacionRuido: "Sí (ANC)",
+      conectividad: "Bluetooth 5.2",
+      cancelacionRuido: "HD Noise Canceling QN1",
       autonomia: "Hasta 30 horas"
     },
     variantes: [
-      { id: "aud-01-negro", color: "Negro", almacenamiento: "N/A", precio: 350000, stock: 8 },
-      { id: "aud-01-silver", color: "Plateado", almacenamiento: "N/A", precio: 350000, stock: 0 }
+      { id: "aud-01-pink", color: "Rosa", almacenamiento: "N/A", precio: 580000, stock: 8, imagen: "/img/auriculares-sony-rosa.jpg" },
+      { id: "aud-01-silver", color: "Blanco Humo", almacenamiento: "N/A", precio: 580000, stock: 0, imagen: "/img/auriculares-sony-blanco.jpg" }
     ]
   },
   {
     id: "aud-02",
-    nombre: "Parlante Bluetooth JBL Charge 5",
+    nombre: "Parlante Bluetooth JBL Charge 6",
     categoria: "Audio",
     marca: "JBL",
-    imagen: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Sonido potente y resistente al agua con powerbank incorporado.",
+    imagen: "/img/parlante-jbl-azul.png",
+    descripcion: "Sonido JBL Pro optimizado, graves profundos y certificación de resistencia total IP68.",
     especificaciones: {
-      conectividad: "Bluetooth 5.1",
-      resistenciaAgua: "IP67",
-      autonomia: "Hasta 20 horas"
+      conectividad: "Bluetooth 5.3",
+      resistenciaAgua: "IP68 (Sumergible)",
+      autonomia: "Hasta 24 horas"
     },
     variantes: [
-      { id: "aud-02-azul", color: "Azul", almacenamiento: "N/A", precio: 210000, stock: 5 },
-      { id: "aud-02-camu", color: "Camuflado", almacenamiento: "N/A", precio: 210000, stock: 4 }
+      { id: "aud-02-azul", color: "Azul Oscuro", almacenamiento: "N/A", precio: 320000, stock: 5, imagen: "/img/parlante-jbl-azul.png" },
+      { id: "aud-02-negro", color: "Negro", almacenamiento: "N/A", precio: 320000, stock: 4, imagen: "/img/parlante-jbl-negro.png" }
     ]
   },
   {
     id: "watch-01",
-    nombre: "Smartwatch Apple Watch Series 9",
+    nombre: "Smartwatch Apple Watch Series 10",
     categoria: "Wearables",
     marca: "Apple",
-    imagen: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Potente procesador, pantalla más brillante y gestos avanzados.",
+    imagen: "/img/applewatch-azul.jpg",
+    descripcion: "Diseño más delgado, pantalla gran angular OLED y sensores de salud de última generación.",
     especificaciones: {
-      pantalla: "Retina OLED",
+      pantalla: "OLED LTPO Wide",
       resistenciaAgua: "50 metros",
-      sensorSalud: "Oxígeno en sangre y ECG"
+      sensorSalud: "Detección de apnea del sueño y ECG"
     },
     variantes: [
-      { id: "watch-01-aluminio-midnight", color: "Midnight", almacenamiento: "64GB", precio: 720000, stock: 4 },
-      { id: "watch-01-aluminio-starlight", color: "Starlight", almacenamiento: "64GB", precio: 720000, stock: 0 }
+      { id: "watch-01-azul", color: "Azul", almacenamiento: "64GB", precio: 950000, stock: 4, imagen: "/img/applewatch-azul.jpg" },
+      { id: "watch-01-violeta", color: "Violeta", almacenamiento: "64GB", precio: 950000, stock: 0, imagen: "/img/applewatch-violeta.jpg" }
     ]
   },
   {
     id: "gam-01",
-    nombre: "Consola Sony PlayStation 5",
+    nombre: "Consola Sony PlayStation 5 Pro",
     categoria: "Videojuegos",
     marca: "Sony",
-    imagen: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Experimenta una velocidad asombrosa con una SSD de ultra alta velocidad.",
+    imagen: "/img/playstation-5.jpg",
+    descripcion: "Arquitectura gráfica mejorada con renderizado avanzado y trazado de rayos acelerado por IA.",
     especificaciones: {
-      almacenamiento: "825GB SSD",
-      resolucion: "Hasta 4K a 120Hz",
-      tecnologia: "Ray Tracing"
+      almacenamiento: "2TB SSD Ultra Rápido",
+      resolucion: "Gaming 4K a 120fps",
+      tecnologia: "PlayStation Spectral Super Resolution (PSSR)"
     },
     variantes: [
-      { id: "gam-01-standard", color: "Blanco", almacenamiento: "825GB", precio: 1350000, stock: 3 }
+      { id: "gam-01-pro", color: "Blanco Edición Pro", almacenamiento: "2TB", precio: 1950000, stock: 3, imagen: "/img/playstation-5.jpg" }
     ]
   },
   {
     id: "acc-01",
-    nombre: "Teclado Mecánico Gamer Razer BlackWidow",
+    nombre: "Teclado Mecánico Gamer Razer BlackWidow V4 Pro",
     categoria: "Accesorios",
     marca: "Razer",
-    imagen: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Switches mecánicos de alta precisión e iluminación RGB personalizable.",
+    imagen: "/img/teclado.jpg",
+    descripcion: "Dial de control mecánico, switches ópticos ultra sensibles e iluminación RGB por tecla.",
     especificaciones: {
-      tipo: "Mecánico",
-      retroiluminacion: "RGB Chroma",
-      conexion: "USB Inalámbrico / Cable"
+      tipo: "Mecánico Óptico",
+      retroiluminacion: "Razer Chroma RGB",
+      conexion: "USB-C Desmontable"
     },
     variantes: [
-      { id: "acc-01-rgb", color: "Negro", almacenamiento: "N/A", precio: 180000, stock: 7 }
+      { id: "acc-01-rgb", color: "Negro", almacenamiento: "N/A", precio: 290000, stock: 7, imagen: "/img/teclado.jpg" }
     ]
   },
   {
     id: "acc-02",
-    nombre: "Mouse Inalámbrico Logitech MX Master 3S",
+    nombre: "Mouse Inalámbrico Logitech MX Master 4",
     categoria: "Accesorios",
     marca: "Logitech",
-    imagen: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Desplazamiento electromagnético MagSpeed y seguimiento sobre cualquier superficie.",
+    imagen: "/img/mouse-negro.jpg",
+    descripcion: "Sensor de alta precisión sobre cristal, rueda háptica inteligente y ergonomía avanzada.",
     especificaciones: {
-      sensor: "8000 DPI Darkfield",
-      conectividad: "Bluetooth / Logi Bolt",
-      bateria: "Hasta 70 días"
+      sensor: "10000 DPI Darkfield",
+      conectividad: "Bluetooth y Logi Bolt USB",
+      bateria: "Hasta 80 días"
     },
     variantes: [
-      { id: "acc-02-gris", color: "Gris Grafito", almacenamiento: "N/A", precio: 145000, stock: 10 },
-      { id: "acc-02-blanco", color: "Blanco Hueso", almacenamiento: "N/A", precio: 145000, stock: 0 }
+      { id: "acc-02-gris", color: "Gris Espacial", almacenamiento: "N/A", precio: 210000, stock: 10, imagen: "/img/mouse-negro.jpg" },
+      { id: "acc-02-blanco", color: "Blanco Platino", almacenamiento: "N/A", precio: 210000, stock: 0, imagen: "/img/mouse-blanco.jpg" }
     ]
   },
   {
     id: "mon-01",
-    nombre: "Monitor Gamer LG UltraGear 27\"",
+    nombre: "Monitor Gamer LG UltraGear OLED 27\"",
     categoria: "Monitores",
     marca: "LG",
-    imagen: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Pantalla IPS con tasa de refresco ultra rápida de 165Hz para gaming competitivo.",
+    imagen: "/img/monitor.jpeg",
+    descripcion: "Panel OLED con negros puros, tiempo de respuesta de 0.03ms y 240Hz de tasa de refresco.",
     especificaciones: {
-      tamano: "27 pulgadas",
-      resolucion: "Full HD (1920x1080)",
-      tasaRefresco: "165Hz"
+      tamano: "27 pulgadas QHD",
+      resolucion: "2560 x 1440",
+      tasaRefresco: "240Hz"
     },
     variantes: [
-      { id: "mon-01-negro", color: "Negro", almacenamiento: "N/A", precio: 430000, stock: 5 }
+      { id: "mon-01-oled", color: "Negro", almacenamiento: "N/A", precio: 890000, stock: 5, imagen: "/img/monitor.jpeg" }
     ]
   },
   {
     id: "tab-01",
-    nombre: "Tablet Samsung Galaxy Tab S9",
+    nombre: "Tablet Samsung Galaxy Tab S11 Ultra",
     categoria: "Tablets",
     marca: "Samsung",
-    imagen: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=600&q=80",
-    descripcion: "Pantalla Dynamic AMOLED 2X con S Pen incluido resistente al agua.",
+    imagen: "/img/tablet-gris.jpg",
+    descripcion: "Pantalla AMOLED inmersiva, procesador de alta potencia y S Pen de baja latencia.",
     especificaciones: {
-      pantalla: "11 pulgadas",
-      memoriaRam: "8GB",
-      almacenamiento: "128GB"
+      pantalla: "12.4 pulgadas",
+      memoriaRam: "12GB",
+      almacenamiento: "256GB"
     },
     variantes: [
-      { id: "tab-01-gris", color: "Gris Grafito", almacenamiento: "128GB", precio: 890000, stock: 3 },
-      { id: "tab-01-beige", color: "Beige", almacenamiento: "256GB", precio: 980000, stock: 0 }
+      { id: "tab-01-gris", color: "Gris Grafito", almacenamiento: "256GB", precio: 1350000, stock: 3, imagen: "/img/tablet-gris.jpg" },
+      { id: "tab-01-plata", color: "Plata Lunar", almacenamiento: "512GB", precio: 1550000, stock: 0, imagen: "/img/tablet-plata.jpg" }
     ]
   }
 ];

@@ -57,7 +57,7 @@ const agregarAlCarrito = (producto, varianteSeleccionada, cantidad = 1) => {
           {
             id: producto.id,
             nombre: producto.nombre,
-            imagen: producto.imagen,
+            imagen: varianteSeleccionada.imagen,
             varianteId: varianteId,
             color: varianteSeleccionada.color,
             almacenamiento: varianteSeleccionada.almacenamiento,

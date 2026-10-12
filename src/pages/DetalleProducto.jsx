@@ -72,7 +72,15 @@ function DetalleProducto({ carrito = [], agregarAlCarrito }) {
 
       <div className="row align-items-center">
         <div className="col-md-6 mb-4 mb-md-0">
-          <img src={producto.imagen} alt={producto.nombre} className="img-fluid rounded shadow-sm w-100 object-fit-cover" style={{ maxHeight: '400px' }} />
+          {/* Contenedor con fondo claro y object-fit-contain para evitar recortes */}
+          <div className="bg-light p-4 rounded shadow-sm text-center d-flex align-items-center justify-content-center" style={{ minHeight: '400px' }}>
+            <img 
+              src={varianteSeleccionada.imagen} 
+              alt={producto.nombre} 
+              className="img-fluid rounded" 
+              style={{ maxHeight: '380px', objectFit: 'contain', width: '100%' }} 
+            />
+          </div>
         </div>
         <div className="col-md-6">
           <span className="badge bg-info text-dark mb-2">{producto.categoria} | Marca: {producto.marca}</span>
@@ -80,7 +88,7 @@ function DetalleProducto({ carrito = [], agregarAlCarrito }) {
           <p className="text-muted mb-4">{producto.descripcion}</p>
 
           {/* Precio limpio sin barra diagonal */}
-          <h3 className="text-success fw-bold mb-4">\${varianteSeleccionada.precio.toLocaleString()}</h3>
+          <h3 className="text-success fw-bold mb-4">${varianteSeleccionada.precio.toLocaleString()}</h3>
 
           {/* Selector de Variantes */}
           <div className="mb-3">
