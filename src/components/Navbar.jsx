@@ -1,77 +1,92 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = ({ carrito = [], totalItems = 0 }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const toggleCart = () => setIsCartOpen(!isCartOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-      <div className="container">
-        {/* Logo / Marca */}
-        <Link to="/" className="navbar-brand fw-bold text-info">
-          TechStore 🚀
+    <nav className="navbar navbar-expand-lg navbar-light site-navbar sticky-top">
+      <div className="container navbar-inner">
+        <Link to="/" className="navbar-brand" onClick={closeMenu}>
+          <span className="brand-mark" aria-hidden="true">T</span>
+          TechStore
         </Link>
 
-        {/* Enlaces de navegación */}
-        <div className="navbar-nav ms-auto flex-row gap-3 align-items-center">
-          <NavLink to="/" className={({ isActive }) => isActive ? "nav-link text-info active" : "nav-link text-white"}>
-            Inicio
-          </NavLink>
-          <NavLink to="/productos" className={({ isActive }) => isActive ? "nav-link text-info active" : "nav-link text-white"}>
-            Catálogo
-          </NavLink>
-          <NavLink to="/contacto" className={({ isActive }) => isActive ? "nav-link text-info active" : "nav-link text-white"}>
-            Contacto
-          </NavLink>
+        <button
+          className="navbar-toggler"
+          type="button"
+          aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-          {/* Botón de Carrito con Badge */}
-          <div className="position-relative ms-2">
-            <button 
+        <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`}>
+          <div className="navbar-nav ms-auto align-items-center">
+            <NavLink to="/" end className="nav-link" onClick={closeMenu}>Inicio</NavLink>
+            <NavLink to="/productos" className="nav-link" onClick={closeMenu}>Catálogo</NavLink>
+            <NavLink to="/contacto" className="nav-link" onClick={closeMenu}>Contacto</NavLink>
+          </div>
+
+          <div className="position-relative ms-lg-3 cart-area">
+            <button
+              type="button"
               onClick={toggleCart}
-              className="btn btn-outline-light btn-sm position-relative"
+              className="btn btn-outline-secondary cart-trigger"
+              aria-expanded={isCartOpen}
+              aria-label={`Carrito, ${totalItems} productos`}
             >
-              🛒 Carrito
-              {totalItems > 0 && (
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-dark fw-bold">
-                  {totalItems}
-                </span>
-              )}
+              <span aria-hidden="true">🛒</span> Carrito
+              {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
             </button>
 
-            {/* Dropdown del Carrito Flotante */}
             {isCartOpen && (
-              <div className="position-absolute end-0 mt-2 bg-white text-dark rounded shadow p-3 border" style={{ width: '280px', zIndex: 1050 }}>
+              <div className="position-absolute end-0 mt-2 bg-white text-dark p-3 cart-popover">
                 <div className="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2">
-                  <h6 className="m-0 fw-bold">Tu Carrito</h6>
-                  <button onClick={toggleCart} className="btn-close btn-close-sm" aria-label="Cerrar"></button>
+                  <h6 className="m-0 fw-bold">Tu carrito</h6>
+                  <button
+                    type="button"
+                    onClick={toggleCart}
+                    className="btn-close"
+                    aria-label="Cerrar carrito"
+                  />
                 </div>
 
                 {carrito.length === 0 ? (
-                  <p className="text-muted text-center m-0 py-3">El carrito está vacío</p>
+                  <p className="text-muted text-center m-0 py-3">Todavía no agregaste productos.</p>
                 ) : (
-                  <div>
-                    <div style={{ maxHeight: '200px', overflowY: 'auto' }} className="mb-2">
+                  <>
+                    <div style={{ maxHeight: '220px', overflowY: 'auto' }} className="mb-2">
                       {carrito.map((item) => (
-                        <div key={item.varianteId} className="d-flex justify-content-between align-items-center small border-bottom py-1">
+                        <div
+                          key={item.varianteId}
+                          className="d-flex justify-content-between align-items-center small border-bottom py-2 gap-3"
+                        >
                           <div>
                             <span className="fw-semibold">{item.nombre}</span>
-                            <div className="text-muted" style={{ fontSize: '11px' }}>
-                              {item.color} (x{item.cantidad})
-                            </div>
+                            <div className="text-muted">{item.color} · {item.cantidad} u.</div>
                           </div>
-                          <span className="fw-bold">${item.precio * item.cantidad}</span>
+                          <span className="fw-bold text-nowrap">
+                            ${(item.precio * item.cantidad).toLocaleString()}
+                          </span>
                         </div>
                       ))}
                     </div>
-                    <Link 
-                      to="/carrito" 
-                      onClick={() => setIsCartOpen(false)}
-                      className="btn btn-dark btn-sm w-100 mt-2"
+                    <Link
+                      to="/carrito"
+                      onClick={() => {
+                        setIsCartOpen(false);
+                        closeMenu();
+                      }}
+                      className="btn btn-primary btn-sm w-100 mt-2"
                     >
-                      Ver Carrito Completo
+                      Ver carrito completo
                     </Link>
-                  </div>
+                  </>
                 )}
               </div>
             )}

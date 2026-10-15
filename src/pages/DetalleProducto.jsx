@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { productos } from '../data/productos';
 
@@ -27,17 +27,9 @@ function DetalleProducto({ carrito = [], agregarAlCarrito }) {
   // Stock real disponible para agregar
   const stockRestante = varianteSeleccionada.stock - cantidadEnCarrito;
 
-  // Sincronizar el input según el stock restante
-  useEffect(() => {
-    if (stockRestante > 0) {
-      setCantidad(1);
-    } else {
-      setCantidad(cantidadEnCarrito); // Si no hay más para agregar, muestra lo que ya tiene en el carrito
-    }
-  }, [varianteSeleccionada, cantidadEnCarrito]);
-
   const handleCambiarVariante = (v) => {
     setVarianteSeleccionada(v);
+    setCantidad(1);
     setMensajeLocal(null);
   };
 
@@ -51,6 +43,7 @@ function DetalleProducto({ carrito = [], agregarAlCarrito }) {
     }
 
     agregarAlCarrito(producto, varianteSeleccionada, cantidad);
+    setCantidad(1);
 
     setTipoMensaje('success');
     setMensajeLocal('¡Producto agregado al carrito con éxito!');
@@ -61,7 +54,7 @@ function DetalleProducto({ carrito = [], agregarAlCarrito }) {
   };
 
   return (
-    <div className="container py-5">
+    <main className="page-container">
       <Link to="/productos" className="btn btn-outline-secondary mb-4">← Volver al catálogo</Link>
       
       {mensajeLocal && (
@@ -73,7 +66,7 @@ function DetalleProducto({ carrito = [], agregarAlCarrito }) {
       <div className="row align-items-center">
         <div className="col-md-6 mb-4 mb-md-0">
           {/* Contenedor con fondo claro y object-fit-contain para evitar recortes */}
-          <div className="bg-light p-4 rounded shadow-sm text-center d-flex align-items-center justify-content-center" style={{ minHeight: '400px' }}>
+          <div className="detail-image-panel bg-light p-4 text-center d-flex align-items-center justify-content-center">
             <img 
               src={varianteSeleccionada.imagen} 
               alt={producto.nombre} 
@@ -88,7 +81,7 @@ function DetalleProducto({ carrito = [], agregarAlCarrito }) {
           <p className="text-muted mb-4">{producto.descripcion}</p>
 
           {/* Precio limpio sin barra diagonal */}
-          <h3 className="text-success fw-bold mb-4">${varianteSeleccionada.precio.toLocaleString()}</h3>
+          <h3 className="detail-price fw-bold mb-4">${varianteSeleccionada.precio.toLocaleString()}</h3>
 
           {/* Selector de Variantes */}
           <div className="mb-3">
@@ -156,7 +149,7 @@ function DetalleProducto({ carrito = [], agregarAlCarrito }) {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
