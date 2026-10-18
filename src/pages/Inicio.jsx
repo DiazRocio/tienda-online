@@ -37,15 +37,21 @@ function Inicio() {
 
       <section className="home-benefits" aria-label="Beneficios de comprar en TechStore">
         <div className="benefit-item">
-          <span className="benefit-icon" aria-hidden="true">🚚</span>
+          <div className="benefit-icon">
+            <img src="/img/envio.png" alt="Envío" />
+          </div>
           <div><strong>Envíos a todo el país</strong><span>Recibí tu compra donde estés</span></div>
         </div>
         <div className="benefit-item">
-          <span className="benefit-icon" aria-hidden="true">🛡️</span>
+          <div className="benefit-icon">
+            <img src="/img/compra-segura.png" alt="Seguridad" />
+          </div>
           <div><strong>Compra segura</strong><span>Atención en cada paso</span></div>
         </div>
         <div className="benefit-item">
-          <span className="benefit-icon" aria-hidden="true">✨</span>
+          <div className="benefit-icon">
+            <img src="/img/calidad.png" alt="Marcas" />
+          </div>
           <div><strong>Marcas que elegís</strong><span>Calidad para todos los días</span></div>
         </div>
       </section>

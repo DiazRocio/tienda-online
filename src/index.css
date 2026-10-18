@@ -360,14 +360,20 @@ a {
 }
 
 .benefit-icon {
-  display: grid;
-  width: 44px;
-  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
   flex: 0 0 auto;
-  place-items: center;
-  border-radius: 13px;
+  border-radius: 16px;
   background: var(--brand-soft);
-  font-size: 1.25rem;
+}
+
+.benefit-icon img {
+  width: 30px; /* Aquí controlas el tamaño exacto del icono */
+  height: 30px;
+  object-fit: contain;
 }
 
 .benefit-item strong,
@@ -466,9 +472,11 @@ a {
 }
 
 .home-featured-image {
-  display: grid;
-  height: 205px;
-  padding: 18px;
+  position: relative;
+  display: flex;
+  height: 210px;
+  overflow: hidden;
+  padding: 10px;
   place-items: center;
   background: #f4f3fa;
 }
