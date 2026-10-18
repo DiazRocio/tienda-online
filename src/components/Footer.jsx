@@ -1,9 +1,7 @@
-import React from 'react';
-
 function Footer() {
   return (
-    <footer className="bg-dark text-white text-center py-3 mt-auto">
-      <p className="mb-0">© 2026 TechStore - Todos los derechos reservados.</p>
+    <footer className="site-footer text-center">
+      <p>© 2026 TechStore · Tecnología para vos, todos los días.</p>
     </footer>
   );
 }
